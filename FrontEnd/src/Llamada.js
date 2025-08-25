@@ -12,7 +12,7 @@ function Llamada() {
   const [PersonaNueva, setPersonaNueva] = useState(false); 
 
   function HandleObtener() {
-    fetch('http://localhost:3001/ApiBackend/Saludo')
+    fetch('https://proyectofull-1.onrender.com/ApiBackend/Saludo')
     .then(response => {
       if (!response.ok) {
         throw new Error('Error en el back');
@@ -34,7 +34,7 @@ function Llamada() {
       nombre: nombre
     }
 
-    fetch('http://localhost:3001/ApiBackend/Saludo',{
+    fetch('https://proyectofull-1.onrender.com/ApiBackend/Saludo',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -57,7 +57,7 @@ function Llamada() {
   }
 
   function ObtenerPersonas(){
-    fetch('http://localhost:3001/ApiBackend/Personas')
+    fetch('https://proyectofull-1.onrender.com/ApiBackend/Personas')
     .then(response => {
       if(!response.ok){
         throw new Error('Error en el back')
@@ -87,7 +87,7 @@ function Llamada() {
       edad: edad
     }
 
-    fetch('http://localhost:3001/ApiBackend/Personas', {
+    fetch('https://proyectofull-1.onrender.com/ApiBackend/Personas', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json'
@@ -112,7 +112,7 @@ function Llamada() {
   }
 
   useEffect(() => {
-    fetch('http://localhost:3001/ApiBackend/Personas')
+    fetch('https://proyectofull-1.onrender.com/ApiBackend/Personas')
     .then(response => {
       if(!response.ok){
         throw new Error('Error en el back')
